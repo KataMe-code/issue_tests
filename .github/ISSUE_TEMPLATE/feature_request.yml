@@ -1,0 +1,45 @@
+name: Feature request
+description: 機能の追加・改善を提案する
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        機能追加・改善の提案フォームです。複数の作業に分かれる場合は、この Issue を親にして task を子として紐付けます。
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景・課題
+      description: 今何に困っているか、なぜ必要かを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: 実現したいことを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 受け入れ条件
+      description: 完了と判断できる条件をチェックリストで書いてください。
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案
+      description: 検討した他の方法があれば書いてください。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認事項
+      options:
+        - label: 同じ内容の Issue が無いことを確認した
+          required: true

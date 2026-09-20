@@ -1,0 +1,49 @@
+name: Task
+description: 1つの PR で完結する作業を登録する
+title: "[Task]: "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        1つの PR で完結する作業単位のフォームです。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 作業種別
+      options:
+        - 実装
+        - 調査
+        - ドキュメント
+        - リファクタリング
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目的
+      description: この作業で何を達成するかを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: work
+    attributes:
+      label: 作業内容
+      description: やることを具体的に書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完了条件
+      description: 完了と判断できる条件をチェックリストで書いてください。
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: refs
+    attributes:
+      label: 関連 Issue・参考
+      description: 親 Issue、関連する Issue や資料があれば書いてください。
