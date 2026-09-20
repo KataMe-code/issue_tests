@@ -1,22 +1,19 @@
 [core]
   quotepath = false  # 日本語文字化け対策
-[init]
-  defaultBranch = main
 [status]
   showUntrackedFiles = all   # add 前に未追跡ファイルを全部見る
 [commit]
   verbose = true             # commit 時にエディタへ diff 表示
 [diff]
-  algorithm = histogram      # 読みやすい diff
-  colorMoved = default       # 移動した行を別色にする
-  renames = copies
+  algorithm = histogram
+  colorMoved = dimmed-zebra
+  colorMovedWS = allow-indentation-change
+  wsErrorHighlight = all
+  renames = true
 [push]
   default = current          # 現ブランチと同名で push
-  followTags = true
 [pull]
   rebase = true              # merge commit の乱立防止
-[fetch]
-  prune = true               # 消えたリモートブランチを掃除
 [rebase]
   autoStash = true
 [merge]
